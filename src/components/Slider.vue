@@ -9,8 +9,7 @@ export default {
   name: 'Slider',
   props: {
     type: String,
-    value: String,
-    color: String
+    value: String
   }
 }
 </script>
