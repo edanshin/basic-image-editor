@@ -8,8 +8,7 @@
 export default {
   name: 'Image',
   props: {
-    source: String,
-    name: String
+    source: String
   }
 }
 </script>
