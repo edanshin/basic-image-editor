@@ -45,6 +45,7 @@ export default {
   },
 
   methods: {
+    // load and display an image file (png or jpg) from the filesystem (using a normal file picker dialog)
     upload(event) {
       var URL = window.webkitURL || window.URL;
       var u = URL.createObjectURL(event.target.files[0]);
@@ -66,6 +67,8 @@ export default {
     },
 
     valueChanged(event) {
+      // a user can adjust the brightness and contrast of the image, in real time,
+      // by moving the slider left or right from its centre position to decrease or increase brightness/contrast respectively
       ARimage.LoadToCanvas(this.canvas, this.sourceImage, this.context);
       this.imageData = this.context.getImageData(0, 0, this.canvas.width, this.canvas.height);
 
@@ -78,6 +81,7 @@ export default {
           break;
       }
 
+      // apply contrast adjustment over brightness adjustment
       ARimage.ModifyBrightness(this.imageData.data, parseInt(this.brightness, 10));
       ARimage.ModifyContrast(this.imageData.data, parseInt(this.contrast, 10));
 
