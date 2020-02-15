@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <b :style="{ color: color}">{{title}}</b> <b>{{value}}</b>
-    <input id="slider" v-model="value" type="range" min="-100" max="100" value="0" class="slider" :disabled="isDisabled" @input="$emit('valueChanged', {type: type, value: $event.target.value})">
+    <input id="slider" accept="image/png, image/jpg, image/jpeg" v-model="value" type="range" min="-100" max="100" value="0" class="slider" :disabled="isDisabled" @input="$emit('valueChanged', {type: type, value: $event.target.value})">
     <p>{{subtitle}}</p>
   </div>
 </template>
