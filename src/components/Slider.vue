@@ -10,11 +10,11 @@
 export default {
   name: 'Slider',
   props: {
-    type: "",
-    title: "",
-    subtitle: "",
-    color: '',
-    isDisabled: true
+    type: String,
+    title: String,
+    subtitle: String,
+    color: String,
+    isDisabled: Boolean
   },
 
   data: function() {
