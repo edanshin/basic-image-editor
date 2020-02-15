@@ -1,4 +1,4 @@
-# basic-image-editor
+# basic-image-editor - Brightness & Contrast
 
 ## Project setup
 ```
