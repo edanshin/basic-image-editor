@@ -24,7 +24,7 @@ import ARimage from '../utils/arimage'
 export default {
   name: 'ImageEditor',
   props: {
-    source: ""
+    source: String
   },
 
   data: function() {
