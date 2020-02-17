@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <b :style="{ color: color}">{{title}}</b> <b>{{value}}</b>
+    <b :style="{ color: color}" class="title">{{title}}</b> <b>{{value}}</b>
     <input id="slider" accept="image/png, image/jpg, image/jpeg" v-model="value" type="range" min="-100" max="100" value="0" :class="type" :disabled="isDisabled" @input="$emit('valueChanged', {type: type, value: $event.target.value})">
-    <p>{{subtitle}}</p>
+    <p class="subtitle">{{subtitle}}</p>
   </div>
 </template>
 
@@ -28,7 +28,7 @@ export default {
 <style scoped lang="scss">
 // base input style
 input[type=range] {
-  height: 27px;
+  height: 0.35em;
   -webkit-appearance: none;
   margin: 10px 0;
   width: 100%;
@@ -38,20 +38,20 @@ input[type=range]:focus {
 }
 input[type=range]::-webkit-slider-runnable-track {
   width: 100%;
-  height: 6px;
+  height: 0.35em;
   cursor: pointer;
   animate: 0.2s;
   box-shadow: 0px 0px 0px #000000;
-  border-radius: 25px;
+  border-radius: 0.5em;
   border: 0px solid #000000;
 }
 
 input[type=range]::-webkit-slider-thumb {
   box-shadow: 0px 0px 0px #000000;
-  border: 3px solid #FFFFFF;
-  height: 18px;
-  width: 18px;
-  border-radius: 25px;
+  border: 0.25em solid #FFFFFF;
+  height: 1.1em;
+  width: 1.1em;
+  border-radius: 50%;
   cursor: pointer;
   -webkit-appearance: none;
   margin-top: -7.5px;
@@ -59,7 +59,7 @@ input[type=range]::-webkit-slider-thumb {
 
 input[type=range]::-moz-range-track {
   width: 100%;
-  height: 6px;
+  height: 0.35em;
   cursor: pointer;
   animate: 0.2s;
   box-shadow: 0px 0px 0px #000000;
@@ -68,26 +68,27 @@ input[type=range]::-moz-range-track {
 }
 
 input[type=range]::-moz-range-progress {
-  height: 6px;
+  height: 0.35em;
   border-radius: 0.5em;
 }
 
 input[type=range]::-moz-range-thumb {
   box-shadow: 0px 0px 0px #000000;
-  border: 3px solid #FFFFFF;
-  height: 18px;
-  width: 18px;
-  border-radius: 25px;
+  border: 0.25em solid #FFFFFF;
+  height: 1.1em;
+  width: 1.1em;
+  border-radius: 50%;
   cursor: pointer;
 }
 input[type=range]::-ms-track {
   width: 100%;
-  height: 6px;
+  height: 0.35em;
   cursor: pointer;
   animate: 0.2s;
   background: transparent;
   border-color: transparent;
   color: transparent;
+  border-radius: 0.5em;
 }
 input[type=range]::-ms-fill-lower {
   border: 0px solid #000000;
@@ -102,10 +103,10 @@ input[type=range]::-ms-fill-upper {
 input[type=range]::-ms-thumb {
   margin-top: 1px;
   box-shadow: 0px 0px 0px #000000;
-  border: 3px solid #FFFFFF;
-  height: 18px;
-  width: 18px;
-  border-radius: 25px;
+  border: 0.25em solid #FFFFFF;
+  height: 1.1em;
+  width: 1.1em;
+  border-radius: 50%;
   cursor: pointer;
 }
 
@@ -201,15 +202,20 @@ input[type=range]::-ms-thumb {
 
 // container
 .container {
-  margin-left: 1em;
-  margin-right: 1em;
-
   border-radius: 0.3em;
-  padding: 1em;
+  padding: 1em 1em 0 1em;
 
   box-shadow:  0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   -moz-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   -o-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.title {
+  font-size: 1.1em;
+}
+
+.subtitle {
+  font-size: 0.9em;
 }
 </style>
