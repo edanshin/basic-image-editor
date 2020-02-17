@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="subheader"></div>
+    <img src="/img/header.png" class="subheader">
     <div class="avatar"></div>
   </div>
 </template>
@@ -17,15 +17,12 @@ export default {
 
 <style scoped lang="scss">
 .subheader {
-  height: 15em;
-  background-image: url("/img/header.png");
-  background-size: cover;
-  background-position: center;
+  width: 100%;
 }
 
 .avatar {
-  height: 7em;
-  width: 7em;
+  height: 5em;
+  width: 5em;
   background-image: url("/img/avatar.png");
   background-size: cover;
   background-position: center;
