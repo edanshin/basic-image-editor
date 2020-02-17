@@ -8,10 +8,8 @@
         <div style="display: flex; justify-content: center;">
           <p class="label">NAME</p><p class="name">{{filename}}</p>
 
-          <div class="upload-btn-wrapper">
-            <button class="uploadBtn">▲ UPLOAD</button>
-            <input type="file" id="file_input" @change="upload"/>
-          </div>
+          <button class="uploadBtn" onclick="document.getElementById('file_input').click()">▲ UPLOAD</button>
+          <input type="file" id="file_input" @change="upload" style="display: none;"/>
         </div>
     </div>
   </div>
@@ -129,13 +127,6 @@ export default {
   color: #25A95B;
 }
 
-.upload-btn-wrapper {
-  position: relative;
-  overflow: hidden;
-  display: inline;
-  margin-left: 1em;
-}
-
 .uploadBtn {
   border: 0.1em solid #DCDEE4;
   color: #6FA6E6;
@@ -143,14 +134,8 @@ export default {
   border-radius: 0.5em;
   font-weight: bold;
   height: 100%;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-}
-
-.upload-btn-wrapper input[type=file] {
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0;
+  padding: 0.7em;
+  margin-left: 1em;
+  height: 100%;
 }
 </style>
