@@ -97,13 +97,13 @@ input[type=range]::-ms-track {
 input[type=range]::-ms-fill-lower {
   background: #25A95B;
   border: 0px solid #000000;
-  border-radius: 50px;
+  border-radius: 0.5em;
   box-shadow: 0px 0px 0px #000000;
 }
 input[type=range]::-ms-fill-upper {
-  background: #25A95B;
+  background: #C8E9D6;
   border: 0px solid #000000;
-  border-radius: 50px;
+  border-radius: 0.5em;
   box-shadow: 0px 0px 0px #000000;
 }
 input[type=range]::-ms-thumb {
