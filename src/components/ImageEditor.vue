@@ -138,4 +138,8 @@ export default {
   margin-left: 1em;
   height: 100%;
 }
+
+.uploadBtn:hover {
+  cursor: pointer;
+}
 </style>
