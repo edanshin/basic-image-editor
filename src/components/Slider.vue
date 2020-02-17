@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <b :style="{ color: color}">{{title}}</b> <b>{{value}}</b>
-    <input id="slider" accept="image/png, image/jpg, image/jpeg" v-model="value" type="range" min="-100" max="100" value="0" class="slider" :disabled="isDisabled" @input="$emit('valueChanged', {type: type, value: $event.target.value})">
+    <input id="slider" accept="image/png, image/jpg, image/jpeg" v-model="value" type="range" min="-100" max="100" value="0" :class="type" :disabled="isDisabled" @input="$emit('valueChanged', {type: type, value: $event.target.value})">
     <p>{{subtitle}}</p>
   </div>
 </template>
@@ -26,6 +26,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+// base input style
 input[type=range] {
   height: 27px;
   -webkit-appearance: none;
@@ -41,37 +42,32 @@ input[type=range]::-webkit-slider-runnable-track {
   cursor: pointer;
   animate: 0.2s;
   box-shadow: 0px 0px 0px #000000;
-  background: #25A95B;
   border-radius: 25px;
   border: 0px solid #000000;
 }
+
 input[type=range]::-webkit-slider-thumb {
   box-shadow: 0px 0px 0px #000000;
   border: 3px solid #FFFFFF;
   height: 18px;
   width: 18px;
   border-radius: 25px;
-  background: #25A95B;
   cursor: pointer;
   -webkit-appearance: none;
   margin-top: -7.5px;
 }
-input[type=range]:focus::-webkit-slider-runnable-track {
-  background: #25A95B;
-}
+
 input[type=range]::-moz-range-track {
   width: 100%;
   height: 6px;
   cursor: pointer;
   animate: 0.2s;
   box-shadow: 0px 0px 0px #000000;
-  background: #C8E9D6;
   border-radius: 0.5em;
   border: 0px solid #000000;
 }
 
 input[type=range]::-moz-range-progress {
-  background-color: #25A95B;
   height: 6px;
   border-radius: 0.5em;
 }
@@ -82,7 +78,6 @@ input[type=range]::-moz-range-thumb {
   height: 18px;
   width: 18px;
   border-radius: 25px;
-  background: #25A95B;
   cursor: pointer;
 }
 input[type=range]::-ms-track {
@@ -95,13 +90,11 @@ input[type=range]::-ms-track {
   color: transparent;
 }
 input[type=range]::-ms-fill-lower {
-  background: #25A95B;
   border: 0px solid #000000;
   border-radius: 0.5em;
   box-shadow: 0px 0px 0px #000000;
 }
 input[type=range]::-ms-fill-upper {
-  background: #C8E9D6;
   border: 0px solid #000000;
   border-radius: 0.5em;
   box-shadow: 0px 0px 0px #000000;
@@ -113,16 +106,100 @@ input[type=range]::-ms-thumb {
   height: 18px;
   width: 18px;
   border-radius: 25px;
-  background: #25A95B;
   cursor: pointer;
 }
-input[type=range]:focus::-ms-fill-lower {
-  background: #25A95B;
-}
-input[type=range]:focus::-ms-fill-upper {
+
+// custom styles - brightness
+.brightness::-webkit-slider-runnable-track {
   background: #25A95B;
 }
 
+.brightness::-webkit-slider-thumb {
+  background: #25A95B;
+}
+
+.brightness:focus::-webkit-slider-runnable-track {
+  background: #25A95B;
+}
+
+.brightness::-moz-range-track {
+  background: #C8E9D6;
+}
+
+.brightness::-moz-range-progress {
+  background-color: #25A95B;
+}
+
+.brightness::-moz-range-thumb {
+  background: #25A95B;
+}
+
+.brightness::-ms-fill-lower {
+  background: #25A95B;
+}
+
+.brightness::-ms-fill-upper {
+  background: #C8E9D6;
+}
+
+.brightness::-ms-thumb {
+  background: #25A95B;
+}
+
+.brightness:focus::-ms-fill-lower {
+  background: #25A95B;
+}
+
+.brightness:focus::-ms-fill-upper {
+  background: #25A95B;
+}
+
+// custom styles - contrast
+.contrast::-webkit-slider-runnable-track {
+  background: #4A90E2;
+}
+
+.contrast::-webkit-slider-thumb {
+  background: #4A90E2;
+}
+
+.contrast:focus::-webkit-slider-runnable-track {
+  background: #4A90E2;
+}
+
+.contrast::-moz-range-track {
+  background: #C8DBE9;
+}
+
+.contrast::-moz-range-progress {
+  background-color: #4A90E2;
+}
+
+.contrast::-moz-range-thumb {
+  background: #4A90E2;
+}
+
+.contrast::-ms-fill-lower {
+  background: #4A90E2;
+}
+
+.contrast::-ms-fill-upper {
+  background: #C8DBE9;
+}
+
+.contrast::-ms-thumb {
+  background: #4A90E2;
+}
+
+.contrast:focus::-ms-fill-lower {
+  background: #4A90E2;
+}
+
+.contrast:focus::-ms-fill-upper {
+  background: #4A90E2;
+}
+
+// container
 .container {
   margin-left: 1em;
   margin-right: 1em;
