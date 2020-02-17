@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="imageEditor">
     <Slider type="brightness" ref="brightness" color="#25A95B" title="Brightness" subtitle="Slide to adjust image brightness! 🔆" :isDisabled="isDisabled" @valueChanged="valueChanged($event)"></Slider>
-    <Slider type="contrast" ref="contrast" color="#4A90E2" title="Contrast" subtitle="Slide to adjust image contrast! 🌓" :isDisabled="isDisabled" @valueChanged="valueChanged($event)"></Slider>
-    <div class="container">
+    <Slider type="contrast" ref="contrast" color="#4A90E2" title="Contrast" subtitle="Slide to adjust image contrast! 🌓" :isDisabled="isDisabled" @valueChanged="valueChanged($event)" style="margin-top: 0.5em;"></Slider>
+    <div class="imageContainer">
       <canvas id="myCanvas" style="width: 100%;"></canvas>
       <br>
         <div style="display: flex; justify-content: center;">
@@ -95,13 +95,15 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.container {
+.imageEditor {
+  padding: 0.7em 1.2em 1.2em 1.2em;
+}
+
+.imageContainer {
   border: 0.1em solid #DCDEE4;
   border-radius: 0.5em;
-
-  margin: 1em;
-
   padding-bottom: 0.5em;
+  margin-top: 2em;
 }
 
 .label {
