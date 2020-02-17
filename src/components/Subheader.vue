@@ -21,15 +21,15 @@ export default {
 }
 
 .avatar {
-  height: 5em;
-  width: 5em;
+  height: 4em;
+  width: 4em;
   background-image: url("/img/avatar.png");
   background-size: cover;
   background-position: center;
   border-radius: 50%;
-  margin-top: -6em;
-  border: 0.3em solid #fff;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: -3.8em;
+  border: 0.1em solid #fff;
+   left: 50%; transform: translate(-50%,0);
+  position: absolute;
 }
 </style>
