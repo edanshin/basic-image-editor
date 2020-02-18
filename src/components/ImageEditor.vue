@@ -3,14 +3,14 @@
     <Slider type="brightness" ref="brightness" color="#25A95B" title="Brightness" subtitle="Slide to adjust image brightness! 🔆" :isDisabled="isDisabled" @valueChanged="valueChanged($event)"></Slider>
     <Slider type="contrast" ref="contrast" color="#4A90E2" title="Contrast" subtitle="Slide to adjust image contrast! 🌓" :isDisabled="isDisabled" @valueChanged="valueChanged($event)" style="margin-top: 0.5em;"></Slider>
     <div class="imageContainer">
-      <canvas id="myCanvas" style="width: 100%; margin-bottom: 0.8em; border-top-left-radius: 0.4em; border-top-right-radius: 0.4em;"></canvas>
-      <br>
-        <div style="display: flex; justify-content: center;">
-          <p class="label">NAME</p><p class="name">{{filename}}</p>
+      <canvas id="myCanvas" style="width: 100%; border-top-left-radius: 0.4em; border-top-right-radius: 0.4em;"></canvas>
 
-          <button class="uploadBtn" onclick="document.getElementById('file_input').click()">&#x25B2;&nbsp;UPLOAD</button>
-          <input type="file" id="file_input" @change="upload" style="display: none;"/>
-        </div>
+      <div style="display: flex; justify-content: center;" class="bottom">
+        <p class="label">NAME</p><p class="name">{{filename}}</p>
+
+        <button class="uploadBtn" onclick="document.getElementById('file_input').click()">&#x25B2;&nbsp;UPLOAD</button>
+        <input type="file" id="file_input" @change="upload" style="display: none;"/>
+      </div>
     </div>
   </div>
 </template>
@@ -100,10 +100,18 @@ export default {
 }
 
 .imageContainer {
-  border: 0.1em solid #DCDEE4;
-  border-radius: 0.5em;
   padding-bottom: 0.5em;
   margin-top: 2em;
+}
+
+.bottom {
+  border-left: 0.1em solid #DCDEE4;
+  border-right: 0.1em solid #DCDEE4;
+  border-bottom: 0.1em solid #DCDEE4;
+  border-radius: 0.4em;
+  border-bottom-left-radius: 0.4m;
+  border-bottom-right-radius: 0.4em;
+  margin-top: -0.6em;
 }
 
 .label {
@@ -132,6 +140,7 @@ export default {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   font-size: 0.8em;
+  font-weight: 600;
 }
 
 .uploadBtn {
@@ -139,9 +148,10 @@ export default {
   color: #6FA6E6;
   background-color: #F6F8FA;
   border-radius: 0.5em;
-  font-weight: bold;
+  font-weight: 600;
   padding: 0.4em;
   margin-left: 2em;
+  font-size: 0.8em;
 }
 
 .uploadBtn:hover {
