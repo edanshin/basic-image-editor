@@ -206,9 +206,9 @@ input[type=range]::-ms-thumb {
   padding: 0.8em 1em 0.15em 1em;
 
   box-shadow: 0px 0px 10px 0px rgba(214, 214, 214, 0.75);
--moz-box-shadow: 0px 0px 10px 0px rgba(214, 214, 214, 0.75);
--webkit-box-shadow: 0px 0px 10px 0px rgba(214, 214, 214, 0.75);
-  //-o-box-shadow: ;
+  -moz-box-shadow: 0px 0px 10px 0px rgba(214, 214, 214, 0.75);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(214, 214, 214, 0.75);
+  -o-box-shadow: 0px 0px 10px 0px rgba(214, 214, 214, 0.75);
 }
 
 .sliderTitle {
