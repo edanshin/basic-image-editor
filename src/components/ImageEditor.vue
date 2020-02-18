@@ -3,7 +3,7 @@
     <Slider type="brightness" ref="brightness" color="#25A95B" title="Brightness" subtitle="Slide to adjust image brightness! 🔆" :isDisabled="isDisabled" @valueChanged="valueChanged($event)"></Slider>
     <Slider type="contrast" ref="contrast" color="#4A90E2" title="Contrast" subtitle="Slide to adjust image contrast! 🌓" :isDisabled="isDisabled" @valueChanged="valueChanged($event)" style="margin-top: 0.5em;"></Slider>
     <div class="imageContainer">
-      <canvas id="myCanvas" style="width: 100%;"></canvas>
+      <canvas id="myCanvas" style="width: 100%; margin-bottom: 0.8em;"></canvas>
       <br>
         <div style="display: flex; justify-content: center;">
           <p class="label">NAME</p><p class="name">{{filename}}</p>
