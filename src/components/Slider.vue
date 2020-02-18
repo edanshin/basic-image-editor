@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <b :style="{ color: color}" class="title">{{title}}</b> <b>{{value}}</b>
+    <b :style="{ color: color}" class="sliderTitle">{{title}}</b> <b>{{value}}</b>
     <input id="slider" accept="image/png, image/jpg, image/jpeg" v-model="value" type="range" min="-100" max="100" value="0" :class="type" :disabled="isDisabled" @input="$emit('valueChanged', {type: type, value: $event.target.value})">
-    <p class="subtitle">{{subtitle}}</p>
+    <p class="sliderSubtitle">{{subtitle}}</p>
   </div>
 </template>
 
@@ -211,11 +211,12 @@ input[type=range]::-ms-thumb {
   //-o-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
-.title {
+.sliderTitle {
   font-size: 1.1em;
+  //font-family: 'Graphik-Medium';
 }
 
-.subtitle {
+.sliderSubtitle {
   font-size: 0.9em;
 }
 </style>
