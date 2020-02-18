@@ -67,4 +67,14 @@ body {
     width: 100%;
   }
 }
+
+@font-face {
+  font-family: Graphik-Medium;
+  src: url("/assets/fonts/Graphik-Medium.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: Graphik-Regular;
+  src: url("/assets/fonts/Graphik-Regular.ttf") format('truetype');
+}
 </style>
