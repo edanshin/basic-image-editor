@@ -218,5 +218,6 @@ input[type=range]::-ms-thumb {
 
 .sliderSubtitle {
   font-size: 0.9em;
+  color: #44526D;
 }
 </style>
