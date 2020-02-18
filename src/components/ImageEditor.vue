@@ -110,20 +110,21 @@ export default {
   border: 0.1em solid #DCDEE4;
   border-top-left-radius: 0.5em;
   border-bottom-left-radius: 0.5em;
-  padding: 0.5em;
+  padding: 0.85em 1em 0.25em 1em;
   background-color: #F6F8FA;
   color: #8392A6;
   font-weight: bold;
+  font-size: 0.7em;
 }
 
 .name {
   border: 0.1em solid #DCDEE4;
   border-top-right-radius: 0.5em;
   border-bottom-right-radius: 0.5em;
-  padding: 0.5em;
+  padding: 0.35em;
   margin-left: -0.1em;
-  width: 8em;
-  max-width: 8em;
+  width: 9em;
+  max-width: 9em;
   text-overflow: ellipsis;
   overflow-x: hidden;
   color: #25A95B;
@@ -135,10 +136,8 @@ export default {
   background-color: #F6F8FA;
   border-radius: 0.5em;
   font-weight: bold;
-  height: 100%;
-  padding: 0.7em;
-  margin-left: 1em;
-  height: 100%;
+  padding: 0.4em;
+  margin-left: 2em;
 }
 
 .uploadBtn:hover {
