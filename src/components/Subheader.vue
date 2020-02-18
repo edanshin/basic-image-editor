@@ -23,7 +23,7 @@ export default {
 .avatar {
   height: 4em;
   width: 4em;
-  background-image: url("/img/avatar.png");
+  background-image: url("/img/avatar.jpg");
   background-size: cover;
   background-position: center;
   border-radius: 50%;
