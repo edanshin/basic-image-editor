@@ -146,7 +146,7 @@ export default {
   background-color: #F6F8FA;
   border-radius: 0.5em;
   font-weight: 600;
-  padding: 0.4em;
+  padding: 0.4em 0.65em 0.4em 0.65em;
   margin-left: 2em;
   font-size: 0.8em;
 }
