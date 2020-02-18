@@ -105,13 +105,10 @@ export default {
 }
 
 .bottom {
-  border-left: 0.1em solid #DCDEE4;
-  border-right: 0.1em solid #DCDEE4;
-  border-bottom: 0.1em solid #DCDEE4;
-  border-radius: 0.4em;
-  border-bottom-left-radius: 0.4m;
-  border-bottom-right-radius: 0.4em;
-  margin-top: -0.6em;
+  border: 0.09em solid #DCDEE4;
+  border-radius: 0 0 0.4em 0.4em;
+  margin-top: -0.5em;
+  padding: 1.2em 0.5em 0.4em 0.5em;
 }
 
 .label {
