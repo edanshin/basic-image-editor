@@ -220,4 +220,8 @@ input[type=range]::-ms-thumb {
   font-size: 0.9em;
   color: #44526D;
 }
+
+input[type=range] {
+  margin: 0 0.25em 0 0.25em;
+}
 </style>
