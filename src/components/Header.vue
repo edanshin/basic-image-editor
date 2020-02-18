@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <p class="title">Brightness & Contrast Developer Test</p>
-    <p class="subtitle">01 Jun, 2018 - 31 Dec, 2019</p>
+    <p class="subtitle">01 Jun, 2018 − 31 Dec, 2019</p>
   </div>
 </template>
 
@@ -27,12 +27,14 @@ export default {
 }
 
 .title {
-  font-size: 0.9em;
+  font-size: 0.96em;
   font-weight: 600;
+  //font-family: 'Graphik-Medium';
 }
 
 .subtitle {
   margin-top: 0.3em;
   font-size: 0.8em;
+  //font-family: 'Graphik-Regular';
 }
 </style>
