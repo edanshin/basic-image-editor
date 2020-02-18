@@ -28,8 +28,8 @@ export default {
   background-position: center;
   border-radius: 50%;
   margin-top: -3.8em;
-  border: 0.1em solid #fff;
-   left: 50%; transform: translate(-50%,0);
+  border: 0.13em solid #fff;
+  left: 50%; transform: translate(-50%,0);
   position: absolute;
 }
 </style>
