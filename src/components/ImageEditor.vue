@@ -5,7 +5,7 @@
     <div class="imageContainer">
       <canvas id="myCanvas"></canvas>
 
-      <div style="display: flex; justify-content: center;" class="bottom">
+      <div style="display: flex; " class="bottom">
         <p class="label">NAME</p><p class="name">{{filename}}</p>
 
         <button class="uploadBtn" onclick="document.getElementById('file_input').click()">&#x25B2;&nbsp;UPLOAD</button>
@@ -129,8 +129,8 @@ export default {
   border-bottom-right-radius: 0.4em;
   padding: 0.7em 0.35em 0 0.35em;
   margin-left: -0.1em;
-  width: 10.5em;
-  max-width: 10.5em;
+  width: 10.8em;
+  max-width: 10.8em;
   text-overflow: ellipsis;
   overflow-x: hidden;
   color: #25A95B;
