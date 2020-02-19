@@ -3,7 +3,7 @@
     <Slider type="brightness" ref="brightness" color="#25A95B" title="Brightness" subtitle="Slide to adjust image brightness! 🔆" :isDisabled="isDisabled" @valueChanged="valueChanged($event)"></Slider>
     <Slider type="contrast" ref="contrast" color="#4A90E2" title="Contrast" subtitle="Slide to adjust image contrast! 🌓" :isDisabled="isDisabled" @valueChanged="valueChanged($event)" style="margin-top: 0.5em;"></Slider>
     <div class="imageContainer">
-      <canvas id="myCanvas" style="width: 100%; border-top-left-radius: 0.4em; border-top-right-radius: 0.4em;"></canvas>
+      <canvas id="myCanvas"></canvas>
 
       <div style="display: flex; justify-content: center;" class="bottom">
         <p class="label">NAME</p><p class="name">{{filename}}</p>
@@ -96,12 +96,12 @@ export default {
 
 <style scoped lang="scss">
 .imageEditor {
-  padding: 0.7em 1.2em 1.2em 1.2em;
+  padding: 0.8em 1.3em 1.2em 1.3em;
 }
 
 .imageContainer {
   padding-bottom: 0.5em;
-  margin-top: 2em;
+  margin-top: 1.95em;
 }
 
 .bottom {
@@ -113,8 +113,8 @@ export default {
 
 .label {
   border: 0.1em solid #DCDEE4;
-  border-top-left-radius: 0.5em;
-  border-bottom-left-radius: 0.5em;
+  border-top-left-radius: 0.4em;
+  border-bottom-left-radius: 0.4em;
   padding: 0.85em 1em 0.25em 1em;
   background-color: #F6F8FA;
   color: #8392A6;
@@ -125,8 +125,8 @@ export default {
 
 .name {
   border: 0.1em solid #DCDEE4;
-  border-top-right-radius: 0.5em;
-  border-bottom-right-radius: 0.5em;
+  border-top-right-radius: 0.4em;
+  border-bottom-right-radius: 0.4em;
   padding: 0.7em 0.35em 0 0.35em;
   margin-left: -0.1em;
   width: 9em;
@@ -144,7 +144,7 @@ export default {
   border: 0.1em solid #DCDEE4;
   color: #6FA6E6;
   background-color: #F6F8FA;
-  border-radius: 0.5em;
+  border-radius: 0.4em;
   font-weight: 600;
   padding: 0.4em 0.65em 0.4em 0.65em;
   margin-left: 2em;
@@ -153,5 +153,11 @@ export default {
 
 .uploadBtn:hover {
   cursor: pointer;
+}
+
+#myCanvas {
+  width: 100%;
+  border-top-left-radius: 0.3em;
+  border-top-right-radius: 0.3em;
 }
 </style>
