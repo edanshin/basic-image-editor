@@ -18,6 +18,8 @@ export default {
 <style scoped lang="scss">
 .subheader {
   width: 100%;
+  //filter: brightness(75%);
+  //filter: contrast(90%);
 }
 
 .avatar {
