@@ -40,7 +40,7 @@ body {
 
 @media screen and (min-width: 1440px) and (max-width: 1919px) {
   #main {
-    width: 40%;
+    width: 22%;
     margin-left: auto;
     margin-right: auto;
   }
