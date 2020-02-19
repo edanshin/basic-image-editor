@@ -138,8 +138,8 @@ export default {
   margin-left: -0.1em;
   display: flex;
   align-items: center;
-  width: 60%;
-  max-width: 60%;
+  width: 65%;
+  max-width: 65%;
 }
 
 .name {
