@@ -30,8 +30,7 @@ export default {
 input[type=range] {
   height: 0.35em;
   -webkit-appearance: none;
-  width: 100%;
-  margin: 0.8em 0.25em 0 0.25em;
+  width: 98%;
 }
 input[type=range]:focus {
   outline: none;
@@ -49,12 +48,12 @@ input[type=range]::-webkit-slider-runnable-track {
 input[type=range]::-webkit-slider-thumb {
   box-shadow: 0px 0px 0px #000000;
   border: 0.25em solid #FFFFFF;
-  height: 1.1em;
-  width: 1.1em;
+  height: 1.4em;
+  width: 1.4em;
   border-radius: 50%;
   cursor: pointer;
   -webkit-appearance: none;
-  margin-top: -7.5px;
+  margin-top: -0.55em;
 }
 
 input[type=range]::-moz-range-track {
