@@ -96,7 +96,7 @@ export default {
 
 <style scoped lang="scss">
 .imageEditor {
-  padding: 0.8em 1.3em 1.2em 1.3em;
+  padding: 0.8em 1.25em 1.2em 1.25em;
 }
 
 .imageContainer {
@@ -106,7 +106,7 @@ export default {
 
 .bottom {
   border: 0.09em solid #DCDEE4;
-  border-radius: 0 0 0.4em 0.4em;
+  border-radius: 0 0 0.35em 0.35em;
   margin-top: -0.5em;
   padding: 1.2em 0.5em 0.4em 0.5em;
 }
