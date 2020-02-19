@@ -31,6 +31,9 @@ input[type=range] {
   height: 0.35em;
   -webkit-appearance: none;
   width: 98%;
+
+  //position: relative;
+  //overflow: hidden;
 }
 input[type=range]:focus {
   outline: none;
@@ -47,6 +50,7 @@ input[type=range]::-webkit-slider-runnable-track {
 
 input[type=range]::-webkit-slider-thumb {
   box-shadow: 0px 0px 0px #000000;
+  //box-shadow: -100vw 0 0 100vw dodgerblue;
   border: 0.25em solid #FFFFFF;
   height: 1.4em;
   width: 1.4em;
