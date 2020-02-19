@@ -30,8 +30,8 @@ export default {
 input[type=range] {
   height: 0.35em;
   -webkit-appearance: none;
-  margin: 10px 0;
   width: 100%;
+  margin: 0.8em 0.25em 0 0.25em;
 }
 input[type=range]:focus {
   outline: none;
@@ -219,9 +219,6 @@ input[type=range]::-ms-thumb {
 .sliderSubtitle {
   font-size: 0.9em;
   color: #44526D;
-}
-
-input[type=range] {
-  margin: 0 0.25em 0 0.25em;
+  margin-top: 0.8em;
 }
 </style>
