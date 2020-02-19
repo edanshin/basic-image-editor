@@ -5,10 +5,13 @@
     <div class="imageContainer">
       <canvas id="myCanvas"></canvas>
 
-      <div style="display: flex; " class="bottom">
-        <p class="label">NAME</p><p class="name">{{filename}}</p>
+      <div class="bottom">
+        <div style="display: flex; height: 100%; width: 60%; max-width: 60%;">
+          <span style="display: flex; align-items: center;" class="label">NAME</span><div class="name-container"><p class="name">{{filename}}</p></div>
+        </div>
 
-        <button class="uploadBtn" onclick="document.getElementById('file_input').click()">&#x25B2;&nbsp;UPLOAD</button>
+        <button style="display: flex; height: 100%;" class="uploadBtn" onclick="document.getElementById('file_input').click()">&#x25B2;&nbsp;UPLOAD</button>
+
         <input type="file" id="file_input" @change="upload" style="display: none;"/>
       </div>
     </div>
@@ -109,13 +112,17 @@ export default {
   border-radius: 0 0 0.35em 0.35em;
   margin-top: -0.5em;
   padding: 1.2em 0.5em 0.4em 0.5em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .label {
   border: 0.1em solid #DCDEE4;
   border-top-left-radius: 0.4em;
   border-bottom-left-radius: 0.4em;
-  padding: 0.85em 1em 0.25em 1em;
+  padding: 0 1em 0 1em;
   background-color: #F6F8FA;
   color: #8392A6;
   font-weight: bold;
@@ -123,21 +130,28 @@ export default {
   letter-spacing: 0.2em;
 }
 
-.name {
-  border: 0.1em solid #DCDEE4;
+.name-container {
+  border: 0.07em solid #DCDEE4;
   border-top-right-radius: 0.4em;
   border-bottom-right-radius: 0.4em;
-  padding: 0.7em 0.35em 0 0.35em;
+  padding: 0 0.35em 0 0.35em;
   margin-left: -0.1em;
-  width: 10.8em;
-  max-width: 10.8em;
-  text-overflow: ellipsis;
-  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  width: 60%;
+  max-width: 60%;
+}
+
+.name {
   color: #25A95B;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   font-size: 0.8em;
   font-weight: 600;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
 }
 
 .uploadBtn {
@@ -146,9 +160,11 @@ export default {
   background-color: #F6F8FA;
   border-radius: 0.4em;
   font-weight: 600;
-  padding: 0.4em 0.65em 0.4em 0.65em;
-  margin-left: 2em;
+  padding: 0 0.65em 0 0.65em;
+  margin-left: 1em;
   font-size: 0.8em;
+  display: flex;
+  align-items: center;
 }
 
 .uploadBtn:hover {
