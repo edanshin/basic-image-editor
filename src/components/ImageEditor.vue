@@ -129,8 +129,8 @@ export default {
   border-bottom-right-radius: 0.4em;
   padding: 0.7em 0.35em 0 0.35em;
   margin-left: -0.1em;
-  width: 9em;
-  max-width: 9em;
+  width: 10.5em;
+  max-width: 10.5em;
   text-overflow: ellipsis;
   overflow-x: hidden;
   color: #25A95B;
