@@ -3,11 +3,11 @@
     <Slider type="brightness" ref="brightness" color="#25A95B" title="Brightness" subtitle="Slide to adjust image brightness! 🔆" :isDisabled="isDisabled" @valueChanged="valueChanged($event)"></Slider>
     <Slider type="contrast" ref="contrast" color="#4A90E2" title="Contrast" subtitle="Slide to adjust image contrast! 🌓" :isDisabled="isDisabled" @valueChanged="valueChanged($event)" style="margin-top: 0.5em;"></Slider>
     <div class="imageContainer">
-      <div class="placeholder" v-if="!sourceImage">
-        Please select an image
+      <div class="placeholder" :style="{display: isDisabled ? 'block' : 'none'}">
+        <h2>Please select an image</h2>
       </div>
 
-      <canvas id="myCanvas" v-if="sourceImage"></canvas>
+      <canvas id="myCanvas" :style="{display: isDisabled ? 'none' : 'block'}"></canvas>
 
       <div class="bottom">
         <div style="display: flex; height: 100%; width: 60%; max-width: 60%;">
@@ -114,7 +114,7 @@ export default {
 .bottom {
   border: 0.09em solid #DCDEE4;
   border-radius: 0 0 0.35em 0.35em;
-  margin-top: -0.5em;
+  margin-top: -0.07em;
   padding: 1.2em 0.5em 0.4em 0.5em;
   height: 2em;
   display: flex;
@@ -182,6 +182,10 @@ export default {
 }
 
 .placeholder {
-
+  border: 0.07em solid #DCDEE4;
+  border-top-right-radius: 0.4em;
+  border-top-left-radius: 0.4em;
+  padding: 0.8em 0 0.5em 0;
+  color: #7344C0;
 }
 </style>
