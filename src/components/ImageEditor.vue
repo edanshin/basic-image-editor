@@ -52,10 +52,10 @@ export default {
   methods: {
     // load and display an image file (png or jpg) from the filesystem (using a normal file picker dialog)
     upload(event) {
-      var URL = window.webkitURL || window.URL;
-      var u = URL.createObjectURL(event.target.files[0]);
-      var img = new Image();
-      img.src = u;
+      const URL = window.webkitURL || window.URL;
+      const objectURL = URL.createObjectURL(event.target.files[0]);
+      const img = new Image();
+      img.src = objectURL;
       var t = this;
 
       this.filename = event.target.files[0].name;
