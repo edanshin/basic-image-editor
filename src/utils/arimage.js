@@ -11,11 +11,11 @@ function truncateColor(value) {
 export default class ARimage {
     static LoadToCanvas(canvas, image, context) {
         // set canvas height to renderable height of the image
-        var height = image.height * (canvas.width / image.width);
+        const height = image.height * (canvas.width / image.width);
         canvas.height = height;
 
-        var imageAspectRatio = image.width / image.height;
-        var canvasAspectRatio = canvas.width / canvas.height;
+        const imageAspectRatio = image.width / image.height;
+        const canvasAspectRatio = canvas.width / canvas.height;
         var renderableHeight, renderableWidth, xStart, yStart;
   
         // If image's aspect ratio is less than canvas's we fit on height
@@ -56,7 +56,7 @@ export default class ARimage {
     }
 
     static ModifyContrast(imageData, contrastLevel) {
-        var factor = (259.0 * (contrastLevel + 255.0)) / (255.0 * (259.0 - contrastLevel));
+        const factor = (259.0 * (contrastLevel + 255.0)) / (255.0 * (259.0 - contrastLevel));
   
         for (var i = 0; i < imageData.length; i+= 4) {
             imageData[i] = truncateColor(factor * (imageData[i] - 128.0) + 128.0);
