@@ -1,22 +1,25 @@
-import { shallowMount } from '@vue/test-utils'
-import ImageEditor from '@/components/ImageEditor.vue'
+import ARimage from '@/utils/arimage.js'
 
-describe('ImageEditor.vue', () => {
+describe('ARimage', () => {
+  const imageData = null;
+  let brightness = 0;
+  let contrast = 0;
+
   it('changes brightness and keeps contrast', () => {
+    // apply contrast adjustment over brightness adjustment
+    ARimage.ModifyBrightness(imageData, parseInt(brightness, 10));
+    ARimage.ModifyContrast(imageData, parseInt(contrast, 10));
 
-
-    const wrapper = shallowMount(ImageEditor, {
-      propsData: { msg }
-    })
-    expect('').toMatch('')
+    expect(brightness).toMatch(0)
+    expect(contrast).toMatch(0)
   }),
 
   it('changes contrast and keeps brightness', () => {
+    // apply contrast adjustment over brightness adjustment
+    ARimage.ModifyBrightness(imageData, parseInt(brightness, 10));
+    ARimage.ModifyContrast(imageData, parseInt(contrast, 10));
 
-
-    const wrapper = shallowMount(ImageEditor, {
-      propsData: { msg }
-    })
-    expect('').toMatch('')
+    expect(brightness).toMatch(0)
+    expect(contrast).toMatch(0)
   })
 })
