@@ -1,7 +1,7 @@
 <template>
   <div class="header">
-    <p class="title">Brightness & Contrast Developer Test</p>
-    <p class="subtitle">01 Jun, 2018 − 31 Dec, 2019</p>
+    <p class="title">Brightness & Contrast</p>
+    <p class="subtitle">Developer Test</p>
   </div>
 </template>
 
