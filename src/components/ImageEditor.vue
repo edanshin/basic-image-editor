@@ -52,21 +52,20 @@ export default {
 
   methods: {
     // load and display an image file (png or jpg) from the filesystem (using a normal file picker dialog)
-    upload(event) {
+    upload (event) {
       const URL = window.webkitURL || window.URL;
       const objectURL = URL.createObjectURL(event.target.files[0]);
       const img = new Image();
       img.src = objectURL;
-      var t = this;
 
       this.filename = event.target.files[0].name;
 
-      img.onload = function() {
-        t.$refs.brightness.value = 0;
-        t.$refs.contrast.value = 0;
-        t.context.clearRect(0, 0, t.canvas.width, t.canvas.height);
-        ARimage.LoadToCanvas(t.canvas, img, t.context);
-        t.isDisabled = false;
+      img.onload = () => {
+        this.$refs.brightness.value = 0;
+        this.$refs.contrast.value = 0;
+        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        ARimage.LoadToCanvas(this.canvas, img, this.context);
+        this.isDisabled = false;
       }
 
       this.sourceImage = img;
