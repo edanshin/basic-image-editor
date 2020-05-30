@@ -1,7 +1,7 @@
 <template>
   <div class="imageEditor">
-    <Slider type="brightness" ref="brightness" color="#25A95B" title="Brightness" subtitle="Slide to adjust image brightness! 🔆" :isDisabled="isDisabled" @valueChanged="valueChanged($event)"></Slider>
-    <Slider type="contrast" ref="contrast" color="#4A90E2" title="Contrast" subtitle="Slide to adjust image contrast! 🌓" :isDisabled="isDisabled" @valueChanged="valueChanged($event)" style="margin-top: 0.5em;"></Slider>
+    <Slider type="brightness" ref="brightness" color="#25A95B" title="Brightness" :subtitle="isDisabled ? '🔆' : 'Slide to adjust image brightness! 🔆'" :isDisabled="isDisabled" @valueChanged="valueChanged($event)"></Slider>
+    <Slider type="contrast" ref="contrast" color="#4A90E2" title="Contrast" :subtitle="isDisabled ? '🌓' : 'Slide to adjust image contrast! 🌓'" :isDisabled="isDisabled" @valueChanged="valueChanged($event)" style="margin-top: 0.5em;"></Slider>
     <div class="imageContainer">
       <div class="placeholder" :style="{display: isDisabled ? 'block' : 'none'}">
         <h2>Please select an image</h2>
@@ -10,7 +10,8 @@
       <canvas id="myCanvas" :style="{display: isDisabled ? 'none' : 'block'}"></canvas>
 
       <div class="bottom">
-        <div style="display: flex; height: 100%; width: 60%; max-width: 60%;">
+        <div v-if="isDisabled" style="display: flex; height: 100%; width: 60%; max-width: 60%;"></div>
+        <div v-if="!isDisabled" style="display: flex; height: 100%; width: 60%; max-width: 60%;">
           <span style="display: flex; align-items: center;" class="label">NAME</span><div class="name-container"><p class="name">{{filename}}</p></div>
         </div>
 
